@@ -1,0 +1,3 @@
+library list
+Aberoth.jar
+javassist.jar
