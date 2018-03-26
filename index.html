@@ -4,9 +4,23 @@
 
 </head>
 <body bgcolor="#3d3429" vlink="white" text="white" link="white">
+   <form>
+      <div>
+         <label for="username">Username:</label>
+        <input type="text" id="username" name="user_name">
+    </div>
+    <div>
+         <label for="passhash">Temporary Password Hash:</label>
+        <input type="text" id="passhash" name="password_hash">
+    </div>
+       <div>
+         <label for="ip">Ip address (as seen in URL):</label>
+        <input type="text" id="ip" name="ip_address">
+    </div>
+</form>
+      
 
 <center>
-
 <!-- <h1>Aberoth</h1> -->
 
 <div><style>
@@ -14,13 +28,13 @@
 </style>
 <script>
    window.autoLoad = {
-   username: "",
-   password: "",
+   username: "username",
+   password: "passhash",
    scaleup: 1,
    scaledown: 1,
    encryptpassword: 0,
    screendefinition: 0,
-   ipaddress: "",
+   ipaddress: "ip",
    fontsize: 14
 };
 </script>
