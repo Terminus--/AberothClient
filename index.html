@@ -1,5 +1,5 @@
 <html><head>
-<title>Custom Aberoth Client v0.2</title>
+<title>Custom Aberoth Client v0.1</title>
 <meta name="description" content="A custom client for the popular HTML/Java based MMORPG Aberoth">
 
 </head>
@@ -21,13 +21,7 @@
       <input type="submit" value="Submit">
     </div>
 </form>
-   <script>
-    function ip()
-    {
-        var ipaddress = document.getElementById("ip").value;
-    } 
-<script>
-     
+
 
 <center>
 <!-- <h1>Aberoth</h1> -->
@@ -43,7 +37,7 @@
    scaledown: 1,
    encryptpassword: 0,
    screendefinition: 0,
-   ipaddress: "",
+   ipaddress: ip,
    fontsize: 14
 };
 </script>
@@ -54,7 +48,13 @@
 
 <script src="HTMLClient/jsfocus.js"></script></div><p>
 
-
+   <script>
+    function ip()
+    {
+        var ipaddress = document.getElementById("ip").value;
+    } 
+<script>
+     
 </p></center>
 
 
