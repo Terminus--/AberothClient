@@ -1,69 +1,54 @@
-<html><head>
-<title>Custom Aberoth Client v0.1</title>
-<meta name="description" content="A custom client for the popular HTML/Java based MMORPG Aberoth">
-
-</head>
-<body bgcolor="#3d3429" vlink="white" text="white" link="white">
-   <form>
-      <div>
-         <label for="username">Username:</label>
-        <input type="text" id="username" name="user_name">
-    </div>
-    <div>
-         <label for="passhash">Temporary Password Hash:</label>
-        <input type="text" id="passhash" name="password_hash">
-    </div>
-    <div>
-         <label for="ip">IP found in HTML:</label>
-        <input type="text" id="ip" name="ip_address">
-    </div>
-    <div>
-      <input type="submit" value="Submit">
-    </div>
-</form>
-
-
-<center>
-<!-- <h1>Aberoth</h1> -->
-
-<div><style>
-#screen {border:20px ridge tan;image-rendering:optimizeSpeed;margin:0;padding:0;display:inline}
-</style>
-<script>
-   window.autoLoad = {
-   username: username,
-   password: passhash,
-   scaleup: 1,
-   scaledown: 1,
-   encryptpassword: 0,
-   screendefinition: 0,
-   ipaddress: ip,
-   fontsize: 14
-};
-</script>
-
-<canvas id="screen" width="640" height="480"></canvas>
-<script src="HTMLClient/lib.js"></script>
-<script src="HTMLClient/aberoth.min.js"></script>
-
-<script src="HTMLClient/jsfocus.js"></script></div><p>
-
-   <script>
-    function ip()
-    {
-        var ipaddress = document.getElementById("ip").value;
-    } 
-   </script>
-   <script type="text/javascript">
-      var userip;
-   </script>
-   <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-   <script type="text/javascript">
-      document.getElementById("ip").value = userip;
-   </script>
-     
-</p></center>
-
-
-
-</body></html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Aberoth Client v0.1</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="description" content="A custom client for the popular HTML/Java based MMORPG Aberoth">
+    </head>
+    <body bgcolor="#3d3429" vlink="white" text="white" link="white">
+        <form>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="user_name">
+            </div>
+            <div>
+                <label for="passhash">Temporary Password Hash:</label>
+                <input type="text" id="passhash" name="password_hash">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <center>
+            <!-- <h1>Aberoth</h1> -->
+            <div>
+                <style>
+                    #screen {border:20px ridge tan;image-rendering:optimizeSpeed;margin:0;padding:0;display:inline}
+                </style>
+                <canvas id="screen" width="640" height="480"></canvas>
+                <script src="HTMLClient/lib.js"></script>
+                <script src="HTMLClient/aberoth.min.js"></script>
+                <script src="HTMLClient/jsfocus.js"></script>
+            </div>
+            <p>
+                <script type="text/javascript">
+                    var userip;
+                </script>
+                <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+                <script type="text/javascript">
+                    var ip = userip;
+                    window.autoLoad = {
+                    username: username,
+                    password: passhash,
+                    scaleup: 1,
+                    scaledown: 1,
+                    encryptpassword: 0,
+                    screendefinition: 0,
+                    ipaddress: ip,
+                    fontsize: 14
+                    };
+                </script>
+            </p>
+        </center>
+    </body>
+</html>
