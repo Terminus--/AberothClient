@@ -7,20 +7,22 @@
 <center>
 
 <!-- <h1>Aberoth</h1> -->
- <form>
+ <form name="target" id="target" method= "POST">
   Target Username:<br>
   <input type="text" name="target"><br>
+  <input type="submit" value="FIRE"><br>
 </form> 
 <div>
                 <script src="HTMLClient/lib.js"></script>
                 <script src="HTMLClient/aberoth.min.js"></script>
                 <script src="HTMLClient/jsfocus.js"></script>
 </div>
-
-
-<script>
+<?php
+echo $_POST['target'];
+echo $_REQUEST['target'];
+echo " <script>
    window.autoLoad = {
-   username: target,
+   username:'target',
    password:"",
    scaleup: 1,
    scaledown: 1,
@@ -30,6 +32,9 @@
    fontsize: 14
 };
 </script>
+"
+?>
+
 </center>
 </body>
 </html>
